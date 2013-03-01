@@ -1,0 +1,109 @@
+/* 
+ * Android Scroid - Screen Android
+ * 
+ * Copyright (C) 2009  Daniel Czerwonk <d.czerwonk@googlemail.com>
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.liquid.wallpapers.free;
+
+import java.net.URI;
+
+/**
+ * @author Daniel Czerwonk
+ * 
+ */
+public class Wallpaper {
+
+	private final String id;
+	private final URI previewUrl;
+	private final String text;
+	private final URI thumbUrl;
+	private final String title;
+	private final URI wallpaperUrl;
+
+	/**
+	 * Creates a new instance of Wallpaper.
+	 * 
+	 * @param id
+	 * @param title
+	 * @param thumbUrl
+	 * @param previewUrl
+	 * @param wallpaperUrl
+	 * @param text
+	 */
+	public Wallpaper(String id, String title, URI thumbUrl, URI previewUrl,
+			URI wallpaperUrl, String text) {
+		super();
+
+		this.id = id;
+		this.title = title;
+		this.thumbUrl = thumbUrl;
+		this.previewUrl = previewUrl;
+		this.wallpaperUrl = wallpaperUrl;
+		this.text = text;
+	}
+
+	/**
+	 * @return Unique id of wallpaper
+	 */
+	public String getId() {
+		return this.id;
+	}
+
+	/**
+	 * @return Url to preview image
+	 */
+	public URI getPreviewUrl() {
+		return this.previewUrl;
+	}
+
+	/**
+	 * @return Text including copyright hints
+	 */
+	public String getText() {
+		return this.text;
+	}
+
+	/**
+	 * @return Url to thumb image
+	 */
+	public URI getThumbUrl() {
+		return this.thumbUrl;
+	}
+
+	/**
+	 * @return Title
+	 */
+	public String getTitle() {
+		return this.title;
+	}
+
+	/**
+	 * @return Url to image
+	 */
+	public URI getWallpaperUrl() {
+		return this.wallpaperUrl;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return this.title;
+	}
+}
